@@ -1,0 +1,22 @@
+2-D Affine Geometric Transformation
+
+Properties:
+	T
+Methods:
+	invert
+	isRigid
+	isSimilarity
+	isTranslation
+	outputLimits
+	transformPointsForward
+	transformPointsInverse
+
+2-D Projective Geometric Transformation
+
+Properties:
+
+Methods:
+	invert
+	outoutLimits
+	transformPointsForward
+	transformPointsInverse

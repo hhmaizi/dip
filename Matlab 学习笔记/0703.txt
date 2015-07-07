@@ -1,0 +1,78 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+目标：
+	1 imwarp
+	2 fitgeotrans()
+	3 imfuse()
+	4 affine2d 类
+	5 hypot()
+	6 imshowpair()
+	7 montage()
+	Git
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+成就：
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+alpha blending 
+see alpha compositing in wikipedia
+see http://blog.chinaunix.net/uid-22028680-id-3483842.html
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+images.geotrans.PiecewiseLinearTransformation2D class
+
+示例：
+theta = 10;
+tformAffine = affine2d([cosd(theta) -sind(theta) 0; ...
+			sind(theta) cosd(theta) 0; 0 0 1]);
+
+fixedPoints = [10 20; 10 5; 2 3; 0 5; -5 3; -10 -20];
+movingPoints = transformPointsForward(tformAffine,fixedPoints);
+
+% 估算几何变换矩阵
+tformPiecewiseLinear = ...
+images.geotrans.PiecewiseLinearTransformation2D(movingPoints,fixedPoints);
+
+movingPointsComputed = transformPointsInverse(tformPiecewiseLinear,fixedPoints);
+
+% 计算估计点与实际点之间的距离，hypot: sqrt(X.^2 +Y.^2); 
+errorInFit = hypot(movingPointsComputed(:,1)-movingPoints(:,1),...
+                   movingPointsComputed(:,2)-movingPoints(:,2));
+
+=========================================================================================
+images.geotrans.PolynomialTransformation2D class
+
+示例：
+用这个函数取代示例1中的images.geotrans.PiecewiseLinearTransformation2D
+
+
+=========================================================================================
+images.geotrans.LocalWeightedMeanTransformation2D 
+
+示例：
+%% 初始化设置变量值
+x = [10, 12, 17, 14, 7, 10];
+y = [8, 2, 6, 10, 20, 4];
+ 
+a = [1 2 3 4 5 6];
+b = [2.3 3 4 5 6 7.5];
+ 
+u = a(1) + a(2).*x + a(3).*y + a(4) .*x.*y + a(5).*x.^2 + a(6).*y.^2;
+v = b(1) + b(2).*x + b(3).*y + b(4) .*x.*y + b(5).*x.^2 + b(6).*y.^2;
+ 
+movingPoints = [u',v'];
+fixedPoints = [x',y'];
+
+%% 估计几何变换
+tformLocalWeightedMean = images.geotrans.LocalWeightedMeanTransformation2D(movingPoints,fixedPoints,6);
+
+movingPointsComputed = transformPointsInverse(tformLocalWeightedMean,fixedPoints);
+ 
+errorInFit = hypot(movingPointsComputed(:,1)-movingPoints(:,1),...
+                       movingPointsComputed(:,2)-movingPoints(:,2))
+

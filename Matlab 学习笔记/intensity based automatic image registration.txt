@@ -1,0 +1,10 @@
+work flow
+
+step 1: load images
+step 2: set up the initial registration
+step 3: improve the registration
+step 4: use initial conditions to improve registration
+step 5: deciding when enough is enough
+step 6: alternate visualization
+
+

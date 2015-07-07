@@ -1,0 +1,10 @@
+repmat()
+imfinfo(filename): information about graphics file
+imshowpair(A,B): compare differences between images
+subimage(X,map): Display multiple images in single figure
+
+imageinfo()
+imfinfo
+imcontrast(gca): gca current axes handle
+imdistline(): creates a distance tool on the current axes, which would show you the distance between two points on the graphic. 
+impixelregion(): 

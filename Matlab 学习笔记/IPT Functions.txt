@@ -1,0 +1,494 @@
+
+Import, Export, and Conversion
+
+Basic Import and Export
+imread	Read image from graphics file
+imwrite	Write image to graphics file
+imfinfo	Information about graphics file
+Scientific File Formats
+dicomanon	Anonymize DICOM file
+dicomdict	Get or set active DICOM data dictionary
+dicominfo	Read metadata from DICOM message
+dicomlookup	Find attribute in DICOM data dictionary
+dicomread	Read DICOM image
+dicomuid	Generate DICOM unique identifier
+dicomwrite	Write images as DICOM files
+nitfinfo	Read metadata from National Imagery Transmission Format (NITF) file
+nitfread	Read image from NITF file
+analyze75info	Read metadata from header file of Analyze 7.5 data set
+analyze75read	Read image data from image file of Analyze 7.5 data set
+interfileinfo	Read metadata from Interfile file
+interfileread	Read images in Interfile format
+High Dynamic Range Images
+hdrread	Read high dynamic range (HDR) image
+hdrwrite	Write Radiance high dynamic range (HDR) image file
+makehdr	Create high dynamic range image
+tonemap	Render high dynamic range image for viewing
+Large Image Files
+ImageAdapter	Interface for image I/O
+isrset	Check if file is R-Set
+openrset	Open R-Set file
+rsetwrite	Create reduced resolution data set from image file
+Image Type Conversion
+gray2ind	Convert grayscale or binary image to indexed image
+ind2gray	Convert indexed image to grayscale image
+mat2gray	Convert matrix to grayscale image
+rgb2gray	Convert RGB image or colormap to grayscale
+ind2rgb	Convert indexed image to RGB image
+label2rgb	Convert label matrix into RGB image
+demosaic	Convert Bayer pattern encoded image to truecolor image
+imquantize	Quantize image using specified quantization levels and output values
+multithresh	 Multilevel image thresholds using Otsu's method
+im2bw	Convert image to binary image, based on threshold
+graythresh	Global image threshold using Otsu's method
+grayslice	Convert grayscale image to indexed image using multilevel thresholding
+im2double	Convert image to double precision
+im2int16	Convert image to 16-bit signed integers
+im2java2d	Convert image to Java buffered image
+im2single	Convert image to single precision
+im2uint16	Convert image to 16-bit unsigned integers
+im2uint8	Convert image to 8-bit unsigned integers
+Synthetic Images
+checkerboard	Create checkerboard image
+phantom	Create head phantom image
+imnoise	Add noise to image
+Display and Exploration
+
+Basic Display
+imshow	Display image
+montage	Display multiple image frames as rectangular montage
+subimage	Display multiple images in single figure
+immovie	Make movie from multiframe image
+implay	Play movies, videos, or image sequences
+warp	Display image as texture-mapped surface
+iptgetpref	Get values of Image Processing Toolbox preferences
+iptprefs	Display Image Processing Toolbox Preferences dialog box
+iptsetpref	Set Image Processing Toolbox preferences or display valid values
+Interactive Exploration with the Image Viewer App
+imtool	Image Viewer app
+imageinfo	Image Information tool
+imcontrast	Adjust Contrast tool
+imdisplayrange	Display Range tool
+imdistline	Distance tool
+impixelinfo	Pixel Information tool
+impixelinfoval	Pixel Information tool without text label
+impixelregion	Pixel Region tool
+immagbox	Magnification box for scroll panel
+imoverview	Overview tool for image displayed in scroll panel
+iptgetpref	Get values of Image Processing Toolbox preferences
+iptprefs	Display Image Processing Toolbox Preferences dialog box
+iptsetpref	Set Image Processing Toolbox preferences or display valid values
+Build Interactive Tools
+imageinfo	Image Information tool
+imcolormaptool	Choose Colormap tool
+imcontrast	Adjust Contrast tool
+imcrop	Crop image
+imdisplayrange	Display Range tool
+imdistline	Distance tool
+impixelinfo	Pixel Information tool
+impixelinfoval	Pixel Information tool without text label
+impixelregion	Pixel Region tool
+impixelregionpanel	Pixel Region tool panel
+immagbox	Magnification box for scroll panel
+imoverview	Overview tool for image displayed in scroll panel
+imoverviewpanel	Overview tool panel for image displayed in scroll panel
+imsave	Save Image Tool
+imscrollpanel	Scroll panel for interactive image navigation
+imellipse	Create draggable ellipse
+imfreehand	Create draggable freehand region
+imline	Create draggable, resizable line
+impoint	Create draggable point
+impoly	Create draggable, resizable polygon
+imrect	Create draggable rectangle
+imroi	Region-of-interest (ROI) base class
+getline	Select polyline with mouse
+getpts	Specify points with mouse
+getrect	Specify rectangle with mouse
+getimage	Image data from axes
+getimagemodel	Image model object from image object
+axes2pix	Convert axes coordinates to pixel coordinates
+imattributes	Information about image attributes
+imgca	Get handle to current axes containing image
+imgcf	Get handle to current figure containing image
+imgetfile	Open Image dialog box
+imhandles	Get all image handles
+iptaddcallback	Add function handle to callback list
+iptcheckhandle	Check validity of handle
+iptgetapi	Get Application Programmer Interface (API) for handle
+iptGetPointerBehavior	Retrieve pointer behavior from HG object
+ipticondir	Directories containing IPT and MATLAB icons
+iptPointerManager	Create pointer manager in figure
+iptremovecallback	Delete function handle from callback list
+iptSetPointerBehavior	Store pointer behavior structure in Handle Graphics object
+iptwindowalign	Align figure windows
+makeConstrainToRectFcn	Create rectangularly bounded drag constraint function
+truesize	Adjust display size of image
+Geometric Transformation, Spatial Referencing, and Image Registration
+
+Geometric Transformations
+imcrop	Crop image
+imresize	Resize image
+imrotate	Rotate image
+imtranslate	Translate image
+impyramid	Image pyramid reduction and expansion
+imwarp	Apply geometric transformation to image
+fitgeotrans	Fit geometric transformation to control point pairs
+imtransform	Apply 2-D spatial transformation to image
+findbounds	Find output bounds for spatial transformation
+fliptform	Flip input and output roles of TFORM structure
+makeresampler	Create resampling structure
+maketform	Create spatial transformation structure (TFORM)
+tformarray	Apply spatial transformation to N-D array
+tformfwd	Apply forward spatial transformation
+tforminv	Apply inverse spatial transformation
+checkerboard	Create checkerboard image
+affine2d	2-D Affine Geometric Transformation
+affine3d	3-D Affine Geometric Transformation
+projective2d	2-D Projective Geometric Transformation
+images.geotrans.PiecewiseLinearTransformation2D	2-D piecewise linear geometric transformation
+images.geotrans.PolynomialTransformation2D	2-D Polynomial Geometric Transformation
+images.geotrans.LocalWeightedMeanTransformation2D	2-D Local Weighted Mean Geometric Transformation
+Spatial Referencing
+imwarp	Apply geometric transformation to image
+imregister	Intensity-based image registration
+imregtform	 Estimate geometric transformation that aligns two 2-D or 3-D images
+imshow	Display image
+imshowpair	Compare differences between images
+imfuse	Composite of two images
+imref2d	Reference 2-D image to world coordinates
+imref3d	Reference 3-D image to world coordinates
+Automatic Registration
+imregister	Intensity-based image registration
+imregconfig	Configurations for intensity-based registration
+imregtform	 Estimate geometric transformation that aligns two 2-D or 3-D images
+imregcorr	Estimates geometric transformation that aligns two 2-D images using phase correlation
+imregdemons	Estimate displacement field that aligns two 2-D or 3-D images
+imfuse	Composite of two images
+imshowpair	Compare differences between images
+registration.metric.MattesMutualInformation	Mattes mutual information metric configuration object
+registration.metric.MeanSquares	Mean square error metric configuration object
+registration.optimizer.RegularStepGradientDescent	Regular step gradient descent optimizer configuration object
+registration.optimizer.OnePlusOneEvolutionary	One-plus-one evolutionary optimizer configuration object
+Control Point Registration
+cpselect	Control Point Selection Tool
+fitgeotrans	Fit geometric transformation to control point pairs
+cpcorr	Tune control-point locations using cross correlation
+cpstruct2pairs	Convert CPSTRUCT to valid pairs of control points
+normxcorr2	Normalized 2-D cross-correlation
+cp2tform	Infer spatial transformation from control point pairs
+Image Enhancement
+
+Contrast Adjustment
+imadjust	Adjust image intensity values or colormap
+imcontrast	Adjust Contrast tool
+imsharpen	Sharpen image using unsharp masking
+histeq	Enhance contrast using histogram equalization
+adapthisteq	Contrast-limited adaptive histogram equalization (CLAHE)
+imhistmatch	Adjust histogram of image to match N-bin histogram of reference image
+decorrstretch	Apply decorrelation stretch to multichannel image
+stretchlim	Find limits to contrast stretch image
+intlut	Convert integer values using lookup table
+imnoise	Add noise to image
+Image Filtering
+imfilter	N-D filtering of multidimensional images
+normxcorr2	Normalized 2-D cross-correlation
+fspecial	Create predefined 2-D filter
+wiener2	2-D adaptive noise-removal filtering
+padarray	Pad array
+freqz2	2-D frequency response
+fsamp2	2-D FIR filter using frequency sampling
+ftrans2	2-D FIR filter using frequency transformation
+fwind1	2-D FIR filter using 1-D window method
+fwind2	2-D FIR filter using 2-D window method
+convmtx2	2-D convolution matrix
+imguidedfilter	Guided filtering of images
+nlfilter	General sliding-neighborhood operations
+medfilt2	2-D median filtering
+ordfilt2	2-D order-statistic filtering
+stdfilt	Local standard deviation of image
+rangefilt	Local range of image
+entropyfilt	Local entropy of grayscale image
+bwareafilt	Extract objects from binary image by size
+bwpropfilt	Extract objects from binary image using properties
+Morphological Operations
+bwhitmiss	Binary hit-miss operation
+bwmorph	Morphological operations on binary images
+bwulterode	Ultimate erosion
+bwareaopen	Remove small objects from binary image
+imbothat	Bottom-hat filtering
+imclearborder	Suppress light structures connected to image border
+imclose	Morphologically close image
+imdilate	Dilate image
+imerode	Erode image
+imextendedmax	Extended-maxima transform
+imextendedmin	Extended-minima transform
+imfill	Fill image regions and holes
+imhmax	H-maxima transform
+imhmin	H-minima transform
+imimposemin	Impose minima
+imopen	Morphologically open image
+imreconstruct	Morphological reconstruction
+imregionalmax	Regional maxima
+imregionalmin	Regional minima
+imtophat	Top-hat filtering
+watershed	Watershed transform
+conndef	Create connectivity array
+iptcheckconn	Check validity of connectivity argument
+applylut	Neighborhood operations on binary images using lookup tables
+bwlookup	 Nonlinear filtering using lookup tables
+makelut	Create lookup table for use with bwlookup
+strel	Create morphological structuring element (STREL)
+getheight	Height of structuring element
+getneighbors	Structuring element neighbor locations and heights
+getnhood	Structuring element neighborhood
+getsequence	Sequence of decomposed structuring elements
+isflat	True for flat structuring element
+reflect	Reflect structuring element
+translate	Translate structuring element (STREL)
+Deblurring
+deconvblind	Deblur image using blind deconvolution
+deconvlucy	Deblur image using Lucy-Richardson method
+deconvreg	Deblur image using regularized filter
+deconvwnr	Deblur image using Wiener filter
+edgetaper	Taper discontinuities along image edges
+otf2psf	Convert optical transfer function to point-spread function
+psf2otf	Convert point-spread function to optical transfer function
+padarray	Pad array
+ROI-Based Processing
+roipoly	Specify polygonal region of interest (ROI)
+poly2mask	Convert region of interest (ROI) polygon to region mask
+roicolor	Select region of interest (ROI) based on color
+roifill	Fill in specified region of interest (ROI) polygon in grayscale image
+roifilt2	Filter region of interest (ROI) in image
+imellipse	Create draggable ellipse
+imfreehand	Create draggable freehand region
+impoly	Create draggable, resizable polygon
+imrect	Create draggable rectangle
+imroi	Region-of-interest (ROI) base class
+Neighborhood and Block Processing
+ImageAdapter	Interface for image I/O
+blockproc	Distinct block processing for image
+bestblk	Determine optimal block size for block processing
+nlfilter	General sliding-neighborhood operations
+col2im	Rearrange matrix columns into blocks
+colfilt	Columnwise neighborhood operations
+im2col	Rearrange image blocks into columns
+Image Arithmetic
+imabsdiff	Absolute difference of two images
+imadd	Add two images or add constant to image
+imapplymatrix	Linear combination of color channels
+imcomplement	Complement image
+imdivide	Divide one image into another or divide image by constant
+imlincomb	Linear combination of images
+immultiply	Multiply two images or multiply image by constant
+imsubtract	Subtract one image from another or subtract constant from image
+Image Analysis
+
+Object Analysis
+bwboundaries	Trace region boundaries in binary image
+bwtraceboundary	Trace object in binary image
+edge	Find edges in intensity image
+imfindcircles	Find circles using circular Hough transform
+viscircles	Create circle
+corner	Find corner points in image
+cornermetric	Create corner metric matrix from image
+imgradient	 Gradient magnitude and direction of an image
+imgradientxy	 Directional gradients of an image
+hough	Hough transform
+houghlines	Extract line segments based on Hough transform
+houghpeaks	Identify peaks in Hough transform
+qtdecomp	Quadtree decomposition
+qtgetblk	Block values in quadtree decomposition
+qtsetblk	Set block values in quadtree decomposition
+Region and Image Properties
+regionprops	Measure properties of image regions
+bwarea	Area of objects in binary image
+bwareafilt	Extract objects from binary image by size
+bwconncomp	Find connected components in binary image
+bwconvhull	Generate convex hull image from binary image
+bwdist	Distance transform of binary image
+bwdistgeodesic	Geodesic distance transform of binary image
+bweuler	Euler number of binary image
+bwperim	Find perimeter of objects in binary image
+bwpropfilt	Extract objects from binary image using properties
+bwselect	Select objects in binary image
+graydist	Gray-weighted distance transform of grayscale image
+imcontour	Create contour plot of image data
+imhist	Histogram of image data
+impixel	Pixel color values
+improfile	Pixel-value cross-sections along line segments
+corr2	2-D correlation coefficient
+mean2	Average or mean of matrix elements
+std2	Standard deviation of matrix elements
+bwlabel	Label connected components in 2-D binary image
+bwlabeln	Label connected components in binary image
+labelmatrix	Create label matrix from bwconncomp structure
+bwpack	Pack binary image
+bwunpack	Unpack binary image
+Texture Analysis
+entropy	Entropy of grayscale image
+entropyfilt	Local entropy of grayscale image
+rangefilt	Local range of image
+stdfilt	Local standard deviation of image
+graycomatrix	Create gray-level co-occurrence matrix from image
+graycoprops	Properties of gray-level co-occurrence matrix
+Image Quality
+immse	 Mean-squared error
+psnr	Peak Signal-to-Noise Ratio (PSNR)
+ssim	Structural Similarity Index (SSIM) for measuring image quality
+Image Segmentation
+activecontour	 Segment image into foreground and background using active contour
+imsegfmm	Binary image segmentation using Fast Marching Method
+gradientweight	Calculate weights for image pixels based on image gradient
+graydiffweight	Calculate weights for image pixels based on grayscale intensity difference
+graythresh	Global image threshold using Otsu's method
+multithresh	 Multilevel image thresholds using Otsu's method
+Image Transforms
+bwdist	Distance transform of binary image
+bwdistgeodesic	Geodesic distance transform of binary image
+graydist	Gray-weighted distance transform of grayscale image
+hough	Hough transform
+dct2	2-D discrete cosine transform
+dctmtx	Discrete cosine transform matrix
+fan2para	Convert fan-beam projections to parallel-beam
+fanbeam	Fan-beam transform
+idct2	2-D inverse discrete cosine transform
+ifanbeam	Inverse fan-beam transform
+iradon	Inverse Radon transform
+para2fan	Convert parallel-beam projections to fan-beam
+radon	Radon transform
+fft2	2-D fast Fourier transform
+fftshift	Shift zero-frequency component to center of spectrum
+ifft2	2-D inverse fast Fourier transform
+ifftshift	Inverse FFT shift
+Color
+
+rgb2lab	Convert RGB to CIE 1976 L*a*b*
+rgb2ntsc	Convert RGB color values to NTSC color space
+rgb2xyz	Convert RGB to CIE 1931 XYZ
+rgb2ycbcr	Convert RGB color values to YCbCr color space
+lab2rgb	Convert CIE 1931 L*a*b* to RGB
+lab2xyz	Convert CIE 1931 L*a*b* to CIE 1931 XYZ
+xyz2lab	Convert CIE 1931 XYZ to CIE 1976 L*a*b*
+xyz2rgb	Convert CIE 1931 XYZ to RGB
+ycbcr2rgb	Convert YCbCr color values to RGB color space
+ntsc2rgb	Convert NTSC values to RGB color space
+lab2double	Convert L*a*b* data to double
+lab2uint16	Convert L*a*b* data to uint16
+lab2uint8	Convert L*a*b* data to uint8
+xyz2double	Convert XYZ color values to double
+xyz2uint16	Convert XYZ color values to uint16
+iccfind	Search for ICC profiles
+iccread	Read ICC profile
+iccroot	Find system default ICC profile repository
+iccwrite	Write ICC color profile to disk file
+isicc	True for valid ICC color profile
+makecform	Create color transformation structure
+applycform	Apply device-independent color space transformation
+imapprox	Approximate indexed image by reducing number of colors
+whitepoint	XYZ color values of standard illuminants
+Code Generation
+
+bwdist	Distance transform of binary image
+bwlookup	 Nonlinear filtering using lookup tables
+bwmorph	Morphological operations on binary images
+bwpack	Pack binary image
+bwselect	Select objects in binary image
+bwtraceboundary	Trace object in binary image
+bwunpack	Unpack binary image
+conndef	Create connectivity array
+edge	Find edges in intensity image
+fitgeotrans	Fit geometric transformation to control point pairs
+fspecial	Create predefined 2-D filter
+getrangefromclass	Default display range of image based on its class
+histeq	Enhance contrast using histogram equalization
+im2double	Convert image to double precision
+im2int16	Convert image to 16-bit signed integers
+im2single	Convert image to single precision
+im2uint16	Convert image to 16-bit unsigned integers
+im2uint8	Convert image to 8-bit unsigned integers
+imadjust	Adjust image intensity values or colormap
+imbothat	Bottom-hat filtering
+imclearborder	Suppress light structures connected to image border
+imclose	Morphologically close image
+imcomplement	Complement image
+imdilate	Dilate image
+imerode	Erode image
+imextendedmax	Extended-maxima transform
+imextendedmin	Extended-minima transform
+imfill	Fill image regions and holes
+imfilter	N-D filtering of multidimensional images
+imhist	Histogram of image data
+imhmax	H-maxima transform
+imhmin	H-minima transform
+imlincomb	Linear combination of images
+imopen	Morphologically open image
+imquantize	Quantize image using specified quantization levels and output values
+imreconstruct	Morphological reconstruction
+imregionalmax	Regional maxima
+imregionalmin	Regional minima
+imtophat	Top-hat filtering
+imwarp	Apply geometric transformation to image
+iptcheckmap	Check validity of colormap
+iptcheckconn	Check validity of connectivity argument
+label2rgb	Convert label matrix into RGB image
+mean2	Average or mean of matrix elements
+medfilt2	2-D median filtering
+multithresh	 Multilevel image thresholds using Otsu's method
+ordfilt2	2-D order-statistic filtering
+padarray	Pad array
+rgb2ycbcr	Convert RGB color values to YCbCr color space
+strel	Create morphological structuring element (STREL)
+stretchlim	Find limits to contrast stretch image
+ycbcr2rgb	Convert YCbCr color values to RGB color space
+imref2d	Reference 2-D image to world coordinates
+imref3d	Reference 3-D image to world coordinates
+affine2d	2-D Affine Geometric Transformation
+projective2d	2-D Projective Geometric Transformation
+GPU Computing
+
+edge	Find edges in intensity image
+histeq	Enhance contrast using histogram equalization
+imadjust	Adjust image intensity values or colormap
+imfill	Fill image regions and holes
+imfilter	N-D filtering of multidimensional images
+imgradient	 Gradient magnitude and direction of an image
+imgradientxy	 Directional gradients of an image
+imhist	Histogram of image data
+imnoise	Add noise to image
+imregdemons	Estimate displacement field that aligns two 2-D or 3-D images
+imresize	Resize image
+imrotate	Rotate image
+imshow	Display image
+mean2	Average or mean of matrix elements
+medfilt2	2-D median filtering
+padarray	Pad array
+std2	Standard deviation of matrix elements
+stdfilt	Local standard deviation of image
+stretchlim	Find limits to contrast stretch image
+bwdist	Distance transform of binary image
+bwlabel	Label connected components in 2-D binary image
+bwlookup	 Nonlinear filtering using lookup tables
+corr2	2-D correlation coefficient
+normxcorr2	Normalized 2-D cross-correlation
+iradon	Inverse Radon transform
+radon	Radon transform
+im2double	Convert image to double precision
+im2single	Convert image to single precision
+im2uint8	Convert image to 8-bit unsigned integers
+im2uint16	Convert image to 16-bit unsigned integers
+imabsdiff	Absolute difference of two images
+imcomplement	Complement image
+imlincomb	Linear combination of images
+bwmorph	Morphological operations on binary images
+imbothat	Bottom-hat filtering
+imclose	Morphologically close image
+imdilate	Dilate image
+imerode	Erode image
+imopen	Morphologically open image
+imreconstruct	Morphological reconstruction
+imtophat	Top-hat filtering
+mat2gray	Convert matrix to grayscale image
+rgb2gray	Convert RGB image or colormap to grayscale
+rgb2ycbcr	Convert RGB color values to YCbCr color space
+ycbcr2rgb	Convert YCbCr color values to RGB color space

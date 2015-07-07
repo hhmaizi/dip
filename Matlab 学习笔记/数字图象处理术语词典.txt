@@ -1,0 +1,54 @@
+=========================================================================================
+
+-----------------------------------------------------------------------------------------
+
+-----------------------------------------------------------------------------------------
+
+-----------------------------------------------------------------------------------------
+
+-----------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------
+deblurring;
+denoise;
+filtering;
+geometric transformation;
+image segmentation;
+image enhancement;
+image restoration;
+image registration;
+morphology;
+noise reduction;
+-----------------------------------------------------------------------------------------
+
+=========================================================================================
+intensity-based image registration
+
+
+=========================================================================================
+Morphing:
+a special effect in motion pictures and animations 
+that changes (or morphs) one image or shape into another 
+through a seamless transition. 
+Most often it is used to depict one person turning into another 
+through technological means or as part of a fantasy or surreal sequence. 
+Traditionally such a depiction would be achieved 
+through cross-fading techniques on film.
+ Since the early 1990s, this has been replaced 
+by computer software to create more realistic transitions.
+
+Image warping:
+the process of digitally manipulating an image such that 
+any shapes portrayed in the image have been significantly distorted. 
+Warping may be used for correcting image distortion 
+as well as for creative purposes (e.g., morphing[1]). 
+The same techniques are equally applicable to video.
+
+triangulation: Èý½ÇÆÊ·Ö
+
